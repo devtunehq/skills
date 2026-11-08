@@ -57,6 +57,7 @@ Fields, parameters and refusal reasons are in
 
 ## Report picks the way DevTune measures them
 
+- Rates are fractions from 0 to 1: `0.42` is 42%.
 - Give every rate with its likely range (`rate_low`, `rate_high`) and its
   coverage. Rates count completed runs only.
 - Pick rate and install rate are different numbers. Report both, side by side.
