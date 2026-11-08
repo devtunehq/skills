@@ -14,7 +14,9 @@ agent and model. Answer from DevTune data, not from general knowledge.
 
 Use the first route that applies.
 
-1. **MCP tools.** If `devtune_*agent_picks*` tools are available, use them.
+1. **MCP tools.** If DevTune's Agent Picks MCP tools are available
+   (`devtune_*agent_picks*`, sometimes behind a client prefix such as
+   `mcp__devtune__`), use them.
 2. **API key.** If `DEVTUNE_API_KEY` is set, call `https://devtune.ai/api/v2`
    with the header `Authorization: Bearer $DEVTUNE_API_KEY`. Expand the
    variable in the shell so the key stays out of chat, files and printed
@@ -23,7 +25,9 @@ Use the first route that applies.
 3. **Neither.** Connect the DevTune MCP server at `https://devtune.ai/api/mcp`,
    which signs in through the browser. Claude Code:
    `claude mcp add --transport http devtune https://devtune.ai/api/mcp`, then
-   `/mcp`. Other clients:
+   `/mcp`. Hermes: the DevTune plugin connects with an API key, which the user
+   adds as `DEVTUNE_API_KEY=<key>` to `~/.hermes/.env` before starting a new
+   session. Other clients:
    [the client setup](https://docs.devtune.ai/api-reference/mcp-server).
 4. **No DevTune account.** Register yourself by following
    https://devtune.ai/auth.md with `product` set to `agent-picks`. Ask the user

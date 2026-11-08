@@ -14,7 +14,8 @@ general knowledge.
 
 Use the first route that applies.
 
-1. **MCP tools.** If `devtune_*` tools are available, use them.
+1. **MCP tools.** If DevTune MCP tools are available (`devtune_*`, sometimes
+   behind a client prefix such as `mcp__devtune__`), use them.
 2. **API key.** If `DEVTUNE_API_KEY` is set, call the REST API at
    `https://devtune.ai/api/v2` with the header
    `Authorization: Bearer $DEVTUNE_API_KEY`. Expand the variable in the shell
@@ -26,6 +27,9 @@ Use the first route that applies.
      then run `/mcp` and sign in.
    - Codex: `codex plugin marketplace add devtunehq/codex-plugins`, then
      install DevTune from the plugin list.
+   - Hermes: the DevTune plugin connects with an API key. The user adds
+     `DEVTUNE_API_KEY=<key>` to `~/.hermes/.env` themselves, then starts a new
+     session.
    - Other clients: add a Streamable HTTP server at
      `https://devtune.ai/api/mcp`, following
      [the client setup](https://docs.devtune.ai/api-reference/mcp-server).

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "devtune": {
+      "type": "streamable-http",
+      "url": "https://devtune.ai/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${DEVTUNE_API_KEY}"
+      }
+    }
+  }
+}
