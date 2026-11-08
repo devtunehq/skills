@@ -77,9 +77,10 @@ edits the key or reconnects.
 
 ## Report numbers the way DevTune measures them
 
-- Rates are already percentages from 0 to 100: `0.23` is 0.23%, not 23%.
-  Check each rate against its range's `successes` and `n` before you report
-  it.
+- Brand awareness, citation presence, share of voice and their ranges are
+  already percentages from 0 to 100: `0.23` is 0.23%, not 23%. Advertising
+  rates are fractions from 0 to 1: `0.0009` is 0.09%. Check each rate against
+  its `successes` and `n` before you report it.
 - A citation is an AI answer linking to a URL. A mention is the brand named
   without a link. Keep them separate.
 - Share of voice compares the user's citations with their configured
